@@ -44,16 +44,16 @@ namespace ccnet.campfire.plugin
                    });
         }
 
-        public IEnumerable<string> Transcript
-        {
-            get
-            {
-                var webResponse = GetFrom("transcript");
-                using (var stream = webResponse.GetResponseStream())
-                using (var reader = new StreamReader(stream))
-                    return new CampfireTranscriptReader().Process(reader.ReadToEnd());
-            }
-        }
+        //public IEnumerable<string> Transcript
+        //{
+        //    get
+        //    {
+        //        var webResponse = GetFrom("transcript");
+        //        using (var stream = webResponse.GetResponseStream())
+        //        using (var reader = new StreamReader(stream))
+        //            return new CampfireTranscriptReader().Process(reader.ReadToEnd());
+        //    }
+        //}
 
         public void Leave()
         {
